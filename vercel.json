@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       { "src": "./index.js", "use": "@vercel/node" },
-      { "src": "public/_astro/", "use": "@vercel/static" }
+      { "src": "public/", "use": "@vercel/static" }
     ],
     "routes": [
         { "src": "/.*", "dest": "/" }
