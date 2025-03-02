@@ -1,0 +1,33 @@
+$width-pc: 768px;
+$width-sp: 767px;
+
+@mixin pc {
+  @media only screen and (min-width: $width-pc) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media only screen and (max-width: $width-sp) {
+    @content;
+  }
+}
+
+
+@mixin hoverable {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+@mixin landscape {
+  @media (min-aspect-ratio: 16/9) {
+    @content;
+  }
+}
+
+@mixin portrait {
+  @media (max-aspect-ratio: 16/9) {
+    @content;
+  }
+}

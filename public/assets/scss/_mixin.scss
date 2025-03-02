@@ -1,0 +1,110 @@
+//@mixin font{
+//
+//}
+
+@mixin show{
+  transition: transform 1000ms, opacity 1000ms;
+  transition-timing-function: $easeOutQuart;
+  transform:translate3d(0, 40px, 0);
+  opacity: 0;
+  &.show{
+    transform:translate3d(0,0,0);
+    opacity: 1;
+  }
+}
+
+@mixin hide{
+  &.hide{
+    opacity: 1;
+  }
+}
+
+
+@mixin center{
+  position: absolute;
+  left: 50vw;
+  top: 50vh;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+@function px_to_vw($stage_width:750, $px:10){
+  @return ($px / $stage_width * 100) + vw;
+}
+
+@function px_to_vh($stage_height:750, $px:10){
+  @return ($px / $stage_height * 100) + vh;
+}
+
+
+@mixin get_liquid_font_size($stage_width:750, $px:10) {
+  font-size: ($px / $stage_width * 100) + vw;
+}
+
+@mixin floor_setting($color1:#ffffff, $color2:#000000, $color3:#0000ff, $color4:#ff0000) {
+  background-color: $color1;
+  .bg{
+    background-color: $color2;
+  }
+
+  .section{
+    h2{
+      .tit{
+        color: $color1;
+      }
+      .tit_sub_color{
+        color: $color2;
+      }
+    }
+  }
+
+  .section_kv{
+    h2{
+      .item{
+        color: $color1;
+      }
+    }
+  }
+
+  .section3{
+    h2, .text{
+      color: $color2;
+    }
+
+    h2{
+      &.show{
+        .item{
+          color: $color2;
+        }
+      }
+    }
+  }
+
+  .next{
+    background-color: $color3;
+    h2{
+      .item{
+        color: $color4;
+      }
+    }
+
+    .more_btn{
+      a, a:visited{
+        color: $color3;
+        transition: color 400ms, background-color 400ms;
+        transition-timing-function: $easeOutQuart;
+
+        @include hoverable{
+          &:hover{
+            background-color: $color4;
+          }
+        }
+
+        &:after{
+          background-color: $color3;
+          transition: background-color 400ms;
+          transition-timing-function: $easeOutQuart;
+        }
+      }
+    }
+  }
+}

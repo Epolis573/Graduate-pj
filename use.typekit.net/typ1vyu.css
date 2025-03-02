@@ -1,0 +1,27 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * acumin-pro:
+ *   - http://typekit.com/eulas/00000000000000003b9acafa
+ *
+ * © 2009-2024 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2023-07-19 09:29:10 UTC"}*/
+
+@import url("../p.typekit.net/p6a16.css?s=1&amp;k=typ1vyu&amp;ht=tk&amp;f=26063&amp;a=83239774&amp;app=typekit&amp;e=css");
+
+@font-face {
+    font-family: "acumin-pro";
+    src: url("af/027dd4/00000000000000003b9acafa/27/l5bba?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&amp;fvd=n6&amp;v=3") format("woff2"), url("af/027dd4/00000000000000003b9acafa/27/d5bba?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&amp;fvd=n6&amp;v=3") format("woff"), url("af/027dd4/00000000000000003b9acafa/27/a5bba?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&amp;fvd=n6&amp;v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-stretch: normal;
+}
+
+.tk-acumin-pro {
+    font-family: "acumin-pro", sans-serif;
+}

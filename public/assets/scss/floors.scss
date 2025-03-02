@@ -1,0 +1,2776 @@
+@import "mixin";
+@import "variable";
+@import "media";
+
+/*
+z-index
+
+*/
+
+.floor{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    color: #fff;
+
+    &.floor7{
+        @include floor_setting($FLOOR7_COLOR, $FLOOR7_SUB_COLOR, $FLOOR8_COLOR, $FLOOR8_SUB_COLOR);
+        .section_kv{
+            h2{
+                @include pc {
+                    bottom: px_to_vh($PC_BASE_H, 161);
+                }
+
+                @include sp {
+
+                }
+            }
+        }
+
+        .section1{
+            .bg{
+                @include pc {
+                    width: 306.7vh;
+                }
+
+                @include sp {
+
+                }
+            }
+
+            .img{
+                @include pc {
+
+                }
+
+                @include sp {
+
+                }
+            }
+
+            h2{
+                @include pc {
+                    left: px_to_vh($PC_BASE_H, 928);
+                }
+            }
+
+            .img2{
+                @include pc {
+                    width: px_to_vh($PC_BASE_H, 440);
+                    height: px_to_vh($PC_BASE_H, 660);
+                    margin-top: 21vh;
+                    margin-left: 60vh;
+                }
+
+                @include sp {
+                    position: absolute;
+                    width: 54rem;
+                    height: 81rem;
+                    margin-top: 117rem;
+                    z-index: 1;
+                    right: 0;
+                }
+            }
+
+            .img3{
+                @include pc {
+                    position: relative;
+                    width: px_to_vh($PC_BASE_H, 1019);
+                    height: px_to_vh($PC_BASE_H, 680);
+                    margin-left: px_to_vh($PC_BASE_H, 101);
+                }
+
+                @include sp {
+                    position: relative;
+                    width: 72rem;
+                    height: 48rem;
+                    margin-top: 13.3rem;
+                    margin-left: 3rem;
+                }
+            }
+
+            .video{
+                @include pc {
+                    margin-right: px_to_vh($PC_BASE_H, -120);
+                }
+
+                @include sp {
+                    position: relative;
+                    width: 63rem;
+                    height: 35.5rem;
+                    z-index: 1;
+                }
+            }
+
+            .bg2{
+                @include pc {
+                    position: relative;
+                    top: 0;
+                    z-index: -1;
+                    width: 70vh;
+                }
+
+                @include sp {
+                    position: relative;
+                    margin-top: -7.2vw;
+                    height: 154.5vw;
+                }
+            }
+        }
+
+        .section2{
+            z-index: 1;
+            .bg_img{
+                @include pc {
+                    left: 138.2vh;
+                }
+
+                @include sp {
+                    top: 108rem;
+                    height: 160.5vw;
+                }
+            }
+
+            h2{
+                @include pc {
+                    top: px_to_vh($PC_BASE_H, 101);
+                    left: px_to_vh($PC_BASE_H, -370);
+                }
+
+                @include sp {
+                    margin-top: -6.8rem;
+                }
+            }
+
+            .text{
+                @include pc {
+                    top: px_to_vh($PC_BASE_H, 249);
+                    left: px_to_vh($PC_BASE_H, -251);
+                }
+
+                @include sp {
+                    margin-top: 3.2rem;
+                }
+            }
+
+            .main_img{
+                @include pc {
+                    width: 138.2vh;
+                }
+
+                @include sp {
+                    height: 66.7vw;
+                }
+            }
+
+            .img2{
+                @include pc {
+                    width: px_to_vh($PC_BASE_H, 450);
+                    height: px_to_vh($PC_BASE_H, 300);
+                    margin-left: px_to_vh($PC_BASE_H, 100);
+                    top: 61.1vh;
+                }
+
+                @include sp {
+                    margin-top: 13.7rem;
+                    width: 54rem;
+                }
+            }
+
+            .video{
+                @include pc {
+                    margin-left: px_to_vh($PC_BASE_H, 1393);
+                }
+
+                @include sp {
+
+                }
+            }
+
+            .img3{
+                @include pc {
+                    width: px_to_vh($PC_BASE_H, 280);
+                    height: px_to_vh($PC_BASE_H, 420);
+                    left: px_to_vh($PC_BASE_H, 2084);
+                    bottom: 13.3vh;
+                }
+
+                @include sp {
+                    width: 27rem;
+                    height: 40.5rem;
+                    margin-top: -55rem;
+                    top: -12.7rem;
+                    margin-left: 48rem;
+                }
+            }
+
+            .img4{
+                @include pc {
+                    margin-left: px_to_vh($PC_BASE_H, 670);
+                    width: px_to_vh($PC_BASE_H, 600);
+                    //height: 100vh;
+                    height: var(--common_stage_height);
+                }
+
+                @include sp {
+                    position: relative;
+                    width: 45rem;
+                    height: 67.5rem;
+                    margin-top: 5.4rem;
+                }
+            }
+        }
+
+        .section3{
+            @include pc {
+                width: 165.2vh;
+            }
+
+            @include sp {
+                height: 108.5vh;
+            }
+
+            h2{
+                @include pc {
+
+                }
+
+                @include sp {
+                    //bottom: 40rem;
+                    top: 50%;
+                    margin-top: 19.2rem;
+                }
+            }
+
+            .text{
+                @include pc {
+
+                }
+
+                @include sp {
+                    //bottom: 20.3rem;
+                    top: 50%;
+                    margin-top: 31rem;
+                }
+            }
+
+            .imgs{
+                @include pc {
+                    width: px_to_vh($PC_BASE_H, 1033);
+                    height: px_to_vh($PC_BASE_H, 706);
+                    left: px_to_vh($PC_BASE_H, 136);
+                    top: 41.1vh;
+                    transform: translate3d(0, -50%, 0);
+                }
+
+                @include sp {
+                    width: 77.7rem;
+                    height: 53.4rem;
+                    left: -1.6rem;
+                    //top: 27.5vh;
+                    top: 50%;
+                    margin-top: -35rem;
+                }
+            }
+        }
+
+        .next{
+            .more_btn{
+                @include pc {
+                    //top: px_to_vh($PC_BASE_H, 537);
+                }
+
+                @include sp {
+
+                }
+            }
+
+            .img{
+                @include pc {
+
+                }
+
+                @include sp {
+                    height: 91vw;
+                }
+            }
+        }
+    }
+
+    &.floor8{
+        @include floor_setting($FLOOR8_COLOR, $FLOOR8_SUB_COLOR, $FLOOR9_COLOR, $FLOOR9_SUB_COLOR);
+
+        .section1{
+            .bg{
+                @include pc {
+                    @include pc {
+                        width: 100%;
+                    }
+
+                }
+
+                @include sp {
+                    height: 197vw;
+                }
+            }
+            h2{
+                @include pc {
+                    left: px_to_vh($PC_BASE_H, 950);
+                }
+
+                @include sp {
+
+                }
+            }
+
+            .img2{
+                @include pc {
+                    width: px_to_vh($PC_BASE_H, 1020);
+                    height: px_to_vh($PC_BASE_H, 680);
+                    margin-left: px_to_vh($PC_BASE_H, 540);
+                }
+
+                @include sp {
+                    width: 72rem;
+                    height: 48rem;
+                    margin-top: 17.6rem;
+                    margin-left: 3rem;
+                }
+            }
+
+            .bg_img{
+                @include pc {
+                    left: px_to_vh($PC_BASE_H, 2340);
+                }
+
+                @include sp {
+                    top: 197vw;
+                    height: 248vw;
+                }
+            }
+
+            .video{
+                @include pc {
+                    margin-right: 5.1rem;
+                }
+
+                @include sp {
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+
+            .img3{
+                @include pc {
+                    position: relative;
+                    width: px_to_vh($PC_BASE_H, 440);
+                    height: px_to_vh($PC_BASE_H, 660);
+                    margin-right: px_to_vh($PC_BASE_H, 510);
+                    margin-top: px_to_vh($PC_BASE_H, 120);
+                }
+
+                @include sp {
+                    position: relative;
+                    z-index: 1;
+                    margin-top: 4.4rem;
+                    width: 54rem;
+                    height: 81rem;
+                    margin-left: 21rem;
+                    margin-bottom: 35.4rem;
+                }
+            }
+        }
+
+        .section2{
+            h2{
+                @include pc {
+                    top: px_to_vh($PC_BASE_H, 101);
+                    left: px_to_vh($PC_BASE_H, -366);
+                }
+
+                @include sp {
+                    margin-top: -15.8rem;
+                }
+            }
+
+            .main_img{
+                @include pc {
+                    width: px_to_vh($PC_BASE_H, 1259);
+                }
+
+                @include sp {
+                    height: 66.7vw;
+                }
+            }
+
+            .text{
+                @include pc {
+                    top: px_to_vh($PC_BASE_H, 357);
+                    left: px_to_vh($PC_BASE_H, -251);
+                }
+
+                @include sp {
+                    margin-top: 3.8rem;
+                }
+            }
+
+            .img2{
+                @include pc {
+                    z-index: 1;
+                    width: px_to_vh($PC_BASE_H, 440);
+                    height: px_to_vh($PC_BASE_H, 660);
+                    margin-left: px_to_vh($PC_BASE_H, 50);
+                    top: 57.7vh;
+                    margin-right: px_to_vh($PC_BASE_H, -100);
+                    transform: translate3d(0, -50%, 0);
+                }
+
+                @include sp {
+                    margin-top: -3.2rem;
+                    top: 21rem;
+                    width: 54rem;
+                    height: 81rem;
+                    z-index: 1;
+                }
+            }
+        }
+
+        .section3{
+            @include pc {
+                width: 183.5vh;
+            }
+
+            @include sp {
+                height: 110.5vh;
+            }
+
+            h2{
+                @include pc {
+                    left: px_to_vh($PC_BASE_H, 815);
+                }
+
+                @include sp {
+
+                }
+            }
+
+            .text{
+                @include pc {
+                    left: px_to_vh($PC_BASE_H, 817);
+                }
+
+                @include sp {
+                    //bottom: 23.6rem;
+                }
+            }
+
+            .imgs{
+                @include pc {
+                    width: px_to_vh($PC_BASE_H, 990);
+                    height: px_to_vh($PC_BASE_H, 712);
+                    left: px_to_vh($PC_BASE_H, 227);
+                    top: 42.1vh;
+                    transform: translate3d(0, -50%, 0);
+                }
+
+                @include sp {
+                    width: 72.1rem;
+                    height: 52rem;
+                    //top: 29.5vh;
+                    left: 1.4rem;
+                }
+            }
+        }
+    }
+
+    &.floor9{
+        @include floor_setting($FLOOR9_COLOR, $FLOOR9_SUB_COLOR, $FLOOR10_COLOR, $FLOOR10_SUB_COLOR);
+        .section1{
+            .bg{
+                @include pc {
+                    width: 260vh;
+                }
+
+                @include sp {
+
+                }
+            }
+
+            h2{
+                @include pc {
+                    left: 113vh;
+                }
+            }
+
+            .img2{
+                @include pc {
+                    width: px_to_vh($PC_BASE_H, 1020);
+                    height: px_to_vh($PC_BASE_H, 680);
+                    margin-left: 60vh;
+                }
+
+                @include sp {
+                    margin-left: 3rem;
+                    margin-top: 13.5rem;
+                }
+            }
+
+            .video{
+                @include pc {
+                    margin-right: px_to_vh($PC_BASE_H, 530);
+
+                }
+
+                @include sp {
+
+                }
+            }
+        }
+
+        .section2{
+            @include pc {
+
+            }
+
+            @include sp {
+                margin-top: 18rem;
+            }
+
+            .bg{
+                @include pc {
+                    top: 0;
+                    left: 0;
+                    width: px_to_vh($PC_BASE_H, 2249);
+                    //height: 100vh;
+                    height: var(--common_stage_height);
+                }
+
+                @include sp {
+                    width: 100vw;
+                    height: 200vw;
+                    top: 133rem;
+                }
+            }
+
+            .bg_img{
+                @include pc {
+                    left: px_to_vh($PC_BASE_H, 2249);
+                    width: px_to_vh($PC_BASE_H, 1340);
+                }
+
+                @include sp {
+                    top: 218rem;
+                    height: 160vw;
+                }
+            }
+
+            h2{
+                @include pc {
+                    top: px_to_vh($PC_BASE_H, 101);
+                    left: px_to_vh($PC_BASE_H, -436);
+                }
+
+                @include sp {
+
+                }
+            }
+
+            .main_img{
+                @include sp {
+                    height: 66vw;
+                    top: 16rem;
+                    position: relative;
+                }
+            }
+
+            .text{
+                @include pc {
+                    top: px_to_vh($PC_BASE_H, 357);
+                    left: px_to_vh($PC_BASE_H, -251);
+                }
+
+                @include sp {
+
+                }
+            }
+
+            .img2{
+                @include pc {
+                    width: px_to_vh($PC_BASE_H, 1030);
+                    height: px_to_vh($PC_BASE_H, 680);
+                    margin-left: px_to_vh($PC_BASE_H, 50);
+                    transform: translate3d(0, -50%, 0);
+                    top: 56.7vh;
+                }
+
+                @include sp {
+                    margin-top: 13.7rem;
+                    width: 72rem;
+                }
+            }
+
+            .video{
+                @include pc {
+                    margin-left: px_to_vh($PC_BASE_H, 2380);
+                    margin-right: px_to_vh($PC_BASE_H, 400);
+                }
+
+                @include sp {
+
+                }
+            }
+
+            .img3{
+                @include pc {
+                    left: px_to_vh($PC_BASE_H, 2530);
+                    width: px_to_vh($PC_BASE_H, 600);
+                    height: px_to_vh($PC_BASE_H, 400);
+                    bottom: 0;
+                }
+
+                @include sp {
+                    width: 51rem;
+                    height: 34rem;
+                    margin-top: 5.3rem;
+                    margin-left: 50vw;
+                    transform: translate3d(-50%, 0, 0);
+                }
+            }
+
+            .img4{
+                @include pc {
+                    transform: translate3d(0, -50%, 0);
+                    margin-left: px_to_vh($PC_BASE_H, 790);
+                    top: px_to_vh($PC_BASE_H, 310);
+                    width: px_to_vh($PC_BASE_H, 420);
+                    height: px_to_vh($PC_BASE_H, 280);
+                }
+
+                @include sp {
+
+                }
+            }
+
+            .img5{
+                @include pc {
+                    margin-left: px_to_vh($PC_BASE_H, 48);
+                    width: px_to_vh($PC_BASE_H, 600);
+                    //height: 100vh;
+                    height: var(--common_stage_height);
+                }
+
+                @include sp {
+                    margin-top: -12.5rem;
+                    width: 54rem;
+                    height: 81rem;
+                    left: 0;
+                    top: 17rem;
+                    z-index: 1;
+                }
+            }
+        }
+
+        .section3{
+            @include pc {
+
+            }
+
+            @include sp {
+                height: 112.7vh;
+            }
+
+            h2{
+                @include pc {
+
+                }
+
+                @include sp {
+                    //bottom: 43.5rem;
+                }
+            }
+
+            .text{
+                @include pc {
+
+                }
+
+                @include sp {
+                    //bottom: 27.8rem;
+                }
+            }
+
+            .imgs{
+                @include pc {
+                    width: px_to_vh($PC_BASE_H, 1028);
+                    height: px_to_vh($PC_BASE_H, 706);
+                    left: px_to_vh($PC_BASE_H, 149);
+                    top: 41.8vh;
+                    transform: translate3d(0, -50%, 0);
+                }
+
+                @include sp {
+                    width: 72.8rem;
+                    height: 50rem;
+                    //top: 30.3vh;
+                    left: 1rem;
+                }
+            }
+        }
+    }
+
+    &.floor10{
+        @include floor_setting($FLOOR10_COLOR, $FLOOR10_SUB_COLOR, $FLOOR11_COLOR, $FLOOR11_SUB_COLOR);
+
+        .section1{
+            .bg{
+                @include pc {
+                    width: 100%;
+                }
+
+                @include sp {
+
+                }
+            }
+
+            h2{
+                @include pc {
+                    left: px_to_vh($PC_BASE_H, 717);
+                }
+
+                @include sp {
+                    top: 0;
+                    margin-top: -15.9rem;
+                }
+            }
+
+            .floor_info{
+                @include pc {
+
+                }
+
+                @include sp {
+                    margin-top: 8rem;
+                }
+            }
+
+            .img2{
+                @include pc {
+                    width: px_to_vh($PC_BASE_H, 1020);
+                    height: px_to_vh($PC_BASE_H, 680);
+                    margin-left: 60vh;
+                }
+
+                @include sp {
+                    margin-top: 13.7rem;
+                    width: 72rem;
+                    height: 48rem;
+                    margin-left: 3rem;
+                }
+            }
+
+            .bg_img{
+                @include pc {
+                    left: 260vh;
+                }
+
+                @include sp {
+                    top: 167vw;
+                    height: 145.1vw;
+                }
+            }
+
+            .video{
+                @include pc {
+                    margin-right: px_to_vh($PC_BASE_H, 510);
+                }
+
+                @include sp {
+                    position: relative;
+                    z-index: 1;
+                    margin-bottom: 33.5rem;
+                }
+            }
+        }
+
+        .section2{
+
+            h2{
+                @include pc {
+                    top: px_to_vh($PC_BASE_H, 101);
+                    left: px_to_vh($PC_BASE_H, -365);
+                }
+
+                @include sp {
+                    margin-top: -16rem;
+                }
+            }
+
+            .main_img{
+
+                @include pc {
+
+                }
+
+                @include sp {
+                    height: 50rem;
+                }
+            }
+
+            .text{
+                @include pc {
+                    top: px_to_vh($PC_BASE_H, 247);
+                    left: px_to_vh($PC_BASE_H, -251);
+                }
+
+                @include sp {
+                    margin-top: 3.5rem;
+                }
+            }
+
+            .video{
+                @include pc {
+                    margin-left: px_to_vh($PC_BASE_H, 1300);
+                }
+
+                @include sp {
+                    margin-top: 18rem;
+                }
+            }
+
+            .img2{
+                @include pc {
+                    width: px_to_vh($PC_BASE_H, 240);
+                    height: px_to_vh($PC_BASE_H, 360);
+                    margin-left: px_to_vh($PC_BASE_H, 450);
+                    transform: translate3d(0, -50%, 0);
+                    margin-right: px_to_vh($PC_BASE_H, 100);
+                    top: 74.4vh;
+                }
+
+                @include sp {
+                    margin-top: 5rem;
+                    width: 45rem;
+                    height: 67.5rem;
+                    margin-bottom: 5rem;
+                }
+            }
+        }
+
+        .section3{
+            @include pc {
+                width: 155.4vh;
+            }
+
+            @include sp {
+                height: 97.5vh;
+            }
+
+            h2{
+                @include pc {
+                    left: px_to_vh($PC_BASE_H, 567);
+                }
+
+                @include sp {
+
+                }
+            }
+
+            .text{
+                @include pc {
+                    left: px_to_vh($PC_BASE_H, 563);
+                }
+
+                @include sp {
+                    //bottom: 23.4rem;
+                }
+            }
+
+            .imgs{
+                @include pc {
+                    width: px_to_vh($PC_BASE_H, 1002);
+                    height: px_to_vh($PC_BASE_H, 690);
+                    left: px_to_vh($PC_BASE_H, 139);
+                    top: 41vh;
+                    transform: translate3d(0, -50%, 0);
+                }
+
+                @include sp {
+                    width: 72.7rem;
+                    height: 50.1rem;
+                    //top: 17.5vh;
+                    left: 1.4rem;
+                }
+            }
+        }
+
+        .next{
+            .more_btn{
+                @include pc {
+                    //top: px_to_vh($PC_BASE_H, 537);
+                }
+
+                @include sp {
+
+                }
+            }
+        }
+    }
+
+    &.floor11{
+        @include floor_setting($FLOOR11_COLOR, $FLOOR11_SUB_COLOR, $ABOUT_COLOR, $ABOUT_SUB_COLOR);
+
+        .section_kv{
+            h2{
+                .tit{
+                    @include pc {
+                        line-height: 0.9;
+                    }
+
+                    @include sp {
+
+                    }
+                }
+            }
+        }
+
+        .section1{
+
+            .bg{
+                @include pc {
+                    width: 260vh;
+                }
+
+                @include sp {
+                    height: 189vw;
+                }
+            }
+
+            .bg_img{
+                @include pc {
+                    width: 193.4vh;
+                    left: 260vh
+                }
+
+                @include sp {
+                    top: 189vw;
+                    height: 161vw;
+                }
+            }
+
+            h2{
+                @include pc {
+                    left: 56.4vh;
+                }
+
+                @include sp {
+                    top: 0;
+                    margin-top: -16rem;
+                }
+            }
+
+            .floor_info{
+                @include pc {
+
+                }
+
+                @include sp {
+                    margin-top: 8rem;
+                }
+            }
+
+            .img2{
+                @include pc {
+                    width: px_to_vh($PC_BASE_H, 1020);
+                    height: px_to_vh($PC_BASE_H, 680);
+                    margin-left: 60vh;
+
+                }
+
+                @include sp {
+                    margin-left: 3rem;
+                    margin-top: 13.5rem;
+                }
+            }
+
+            .video{
+                @include pc {
+                    margin-right: px_to_vh($PC_BASE_H, -440);
+                }
+
+                @include sp {
+                    z-index: 1;
+                    position: relative;
+                }
+            }
+
+            .img3{
+                @include pc {
+                    z-index: 1;
+                    width: px_to_vh($PC_BASE_H, 600);
+                    height: px_to_vh($PC_BASE_H, 400);
+                }
+
+                @include sp {
+                    width: 54rem;
+                    height: 36rem;
+                    position: relative;
+                    margin-top: 5rem;
+                    margin-left: 21rem;
+                }
+            }
+
+            .img4{
+                @include pc {
+                    width: px_to_vh($PC_BASE_H, 420);
+                    height: px_to_vh($PC_BASE_H, 280);
+                    position: relative;
+                    top: 50vh;
+                    margin-left: px_to_vh($PC_BASE_H, -60);
+                }
+
+                @include sp {
+                    width: 36rem;
+                    height: 24rem;
+                    margin-top: 5rem;
+                    margin-left: 3rem;
+                    position: relative;
+                }
+            }
+
+            .img5{
+                @include pc {
+                    width: px_to_vh($PC_BASE_H, 420);
+                    height: px_to_vh($PC_BASE_H, 280);
+                    margin-left: px_to_vh($PC_BASE_H, -260);
+                    margin-right: px_to_vh($PC_BASE_H, 480);
+                    position: relative;
+                    top: px_to_vh($PC_BASE_H, 120);
+                }
+
+                @include sp {
+                    width: 36rem;
+                    height: 24rem;
+                    margin-top: -12rem;
+                    margin-left: 39rem;
+                    margin-bottom: 33.7rem;
+                    position: relative;
+                }
+            }
+        }
+
+        .section2{
+            h2{
+                @include pc {
+                    top: px_to_vh($PC_BASE_H, 101);
+                    left: px_to_vh($PC_BASE_H, -335);
+                }
+
+                @include sp {
+                    margin-top: -16rem;
+                }
+            }
+
+            .main_img{
+                @include pc {
+                    width: 138vh;
+                }
+
+                @include sp {
+                    height: 50rem;
+                }
+            }
+
+            .text{
+                @include pc {
+                    top: px_to_vh($PC_BASE_H, 357);
+                    left: px_to_vh($PC_BASE_H, -251);
+                }
+
+                @include sp {
+                    margin-top: 3.5rem;
+                    margin-bottom: 8.2rem;
+                }
+            }
+
+            .video{
+                @include pc {
+                    position: relative;
+                    margin-left: px_to_vh($PC_BASE_H, 51);
+                    margin-right: px_to_vh($PC_BASE_H, 50);
+                }
+
+                @include sp {
+                    margin-bottom: 5.6rem;
+                }
+            }
+        }
+
+        .section3{
+            @include pc {
+                width: px_to_vh($PC_BASE_H, 1439);
+            }
+
+            @include sp {
+                height: 94.5vh;
+            }
+
+
+            h2{
+                @include pc {
+                    left: px_to_vh($PC_BASE_H, 606);
+                }
+
+                @include sp {
+                    //bottom: 34.8rem;
+                }
+            }
+
+            .text{
+                @include pc {
+                    left: px_to_vh($PC_BASE_H, 602);
+                }
+
+                @include sp {
+                    //bottom: 19.6rem;
+                }
+            }
+
+            .imgs{
+                @include pc {
+                    width: px_to_vh($PC_BASE_H, 998);
+                    height: px_to_vh($PC_BASE_H, 698);
+                    left: px_to_vh($PC_BASE_H, 144);
+                    top: 44.6vh;
+                    transform: translate3d(0, -50%, 0);
+                }
+
+                @include sp {
+                    width: 73.2rem;
+                    height: 51.2rem;
+                    //top: 17.1vh;
+                    left: 0.8rem;
+                }
+            }
+        }
+
+        .next{
+            .next_text{
+                @include pc {
+                    top: px_to_vh($PC_BASE_H, 160);
+                }
+
+                @include sp {
+
+                }
+            }
+
+            h2{
+                @include pc {
+                    margin-top: px_to_vh($PC_BASE_H, 152);
+                }
+
+                @include sp {
+
+                }
+            }
+
+            .more_btn{
+                @include pc {
+                    //top: px_to_vh($PC_BASE_H, 534);
+                }
+
+                @include sp {
+
+                }
+            }
+        }
+    }
+
+    &.floor_about{
+        @include floor_setting($ABOUT_COLOR, $ABOUT_SUB_COLOR, $ABOUT_COLOR);
+
+        &.start{
+            .section_kv{
+                .text, .color_palette, .current_text{
+                    opacity: 1;
+                }
+            }
+
+        }
+        .section_kv{
+            &.show_from_top{
+                transition: clip-path 1000ms;
+                transition-timing-function: $easeOutQuart;
+                clip-path: inset(0 0 0 0) !important;
+            }
+
+            @include pc {
+                width: 100vw;
+            }
+
+            @include sp {
+                height: auto;
+                padding-bottom: 7.5svh;
+                //height: 119.5svh;
+            }
+
+            .main_img{
+                @include pc {
+                    width: 100vw;
+                }
+
+                @include sp {
+                    position: absolute;
+                    height: 100%;
+                }
+
+                video{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .current_text{
+                opacity: 0;
+                transition: opacity 500ms;
+                transition-timing-function: $easeOutQuart;
+                transition-delay: 500ms;
+
+                @include pc {
+                    position: absolute;
+                    font-size: px_to_vh($PC_BASE_H, 16);
+                    top: px_to_vh($PC_BASE_H, 208);
+                    left: 7rem;
+
+                    @include portrait{
+                        top: 20.8rem;
+                    }
+                }
+
+                @include sp {
+                    position: relative;
+                    font-size: 2.6rem;
+                    padding-top: 14.6svh;
+                    left: 3rem;
+                }
+            }
+
+            h2{
+                @include pc {
+                    top: px_to_vh($PC_BASE_H, 200);
+                    left: 28rem;
+                    @include portrait{
+                        top: 20rem;
+                    }
+
+                    .tit{
+                        line-height: .9;
+                        @include portrait{
+                            font-size: 12rem;
+                        }
+
+                    }
+                }
+
+                @include sp {
+                    position: relative;
+                    bottom: inherit;
+                    margin-top: 2svh;
+                    .tit{
+                        font-size: 9rem;
+                        line-height: .9;
+
+                        .space{
+                            width: 1.2rem;
+                        }
+                    }
+                }
+            }
+
+            .text{
+                opacity: 0;
+                transition-delay: 500ms;
+                @include pc {
+                    position: absolute;
+                    font-size: px_to_vh($PC_BASE_H, 13);
+                    right: 6.3rem;
+                    left: auto;
+                    bottom: px_to_vh($PC_BASE_H, 43);
+                    width: 45.5rem;
+                    line-height: 2;
+
+                }
+
+                @include sp {
+                    position: relative;
+                    bottom: inherit;
+                    width: 51rem;
+                    left: 21rem;
+                    margin-top: 5.5svh;
+                    line-height: 1.62;
+                    text-align: justify;
+                }
+            }
+
+            .color_palette{
+                opacity: 0;
+                transition: opacity 500ms;
+                transition-timing-function: $easeOutQuart;
+                transition-delay: 500ms;
+
+                @include pc {
+                    position: absolute;
+                    left: 20.1vw;
+                    top: px_to_vh($PC_BASE_H, 564);
+                    width: 12.5rem;
+                    height: px_to_vh($PC_BASE_H, 6);
+
+                    @include portrait{
+                        top: 56.4rem;
+                    }
+                }
+
+                @include sp {
+                    position: relative;
+                    width: 15rem;
+                    height: 0.8rem;
+                    left: 3rem;
+                    margin-top: 2.1svh;
+                }
+
+                span{
+                    width: 20%;
+                    height: 100%;
+                    display: inline-block;
+                }
+                .palette1{
+                    background-color: $FLOOR7_COLOR;
+                }
+
+                .palette2{
+                    background-color: $FLOOR8_COLOR;
+                }
+
+                .palette3{
+                    background-color: $FLOOR9_COLOR;
+                }
+
+                .palette4{
+                    background-color: $FLOOR10_COLOR;
+                }
+
+                .palette5{
+                    background-color: $FLOOR11_COLOR;
+                }
+            }
+
+            .scroll{
+                @include pc {
+                    font-size: px_to_vh($PC_BASE_H, 22);
+                    left: 29rem;
+                    bottom: 3.7rem;
+                    @include portrait{
+                        font-size: 2.2rem;
+                    }
+
+                    &:before{
+                        content: none;
+                    }
+                }
+
+                @include sp {
+                    position: absolute;
+                    top: 86.5svh;
+                }
+
+
+            }
+        }
+
+        .section1{
+            width: 100vw;
+            @include pc {
+
+            }
+
+            @include sp {
+                margin-bottom: 6svh;
+            }
+
+            .bg_img{
+                overflow: hidden;
+                width: 100vw;
+                @include pc {
+
+                }
+
+                @include sp {
+                    height: 110svh;
+                }
+
+                img{
+                    filter: grayscale(1);
+                    mix-blend-mode: multiply;
+                }
+
+                .loop_text{
+                    position: absolute;
+                    opacity: .18;
+                    white-space: nowrap;
+                    color: $ABOUT_COLOR;
+
+                    @include pc {
+                        font-size: 15rem;
+                        top: 48.7vh;
+                        transform: translate3d(0, -50%, 0);
+                    }
+
+                    @include sp {
+                        font-size: 12rem;
+                        top: 0;
+                        line-height: 0.55;
+                    }
+
+                    span{
+                        letter-spacing: 0;
+                        padding-right: 5rem;
+                        display: inline-block;
+                    }
+                }
+
+                .multiply_target{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $ABOUT_COLOR;
+                }
+            }
+
+            .text{
+                color: $ABOUT_COLOR;
+                opacity: 1;
+                text-align: left;
+                white-space: nowrap;
+                @include pc {
+                    font-size: 1.6rem;
+                    left: 4.8vw;
+                    top: px_to_vh($PC_BASE_H, 217);
+                    line-height: 1.1;
+                    letter-spacing: 0;
+
+                }
+
+                @include sp {
+                    font-size: 2.4rem;
+                    margin-top: 0;
+                    margin-left: 3rem;
+                    line-height: 1.2;
+                    padding-top: 9svh;
+                }
+            }
+
+            .credit{
+                position: relative;
+
+                @include pc {
+                    top: 23.3vh;
+                    left: 46.5vw;
+                    width: 48.7vw;
+                }
+
+                @include sp {
+                    margin-top: 4.5svh;
+                    margin-left: 28vw;
+                    width: 68vw;
+                }
+
+                h3{
+                    color: $ABOUT_COLOR;
+                    &:after{
+                        content: '';
+                        width: 100%;
+                        height: 1px;
+                        background-color: $ABOUT_COLOR;
+                        display: block;
+                    }
+
+                    @include pc {
+                        font-size: px_to_vh($PC_BASE_H, 16);
+
+                        @include portrait{
+                            font-size: 1.6rem;
+                        }
+                    }
+
+                    @include sp {
+                        font-size: 2.4rem;
+                        &:after{
+                            margin-top: 0.5svh;
+                        }
+                    }
+                }
+
+                .designed_by{
+                    opacity: .65;
+                    @include pc {
+                        font-size: px_to_vh($PC_BASE_H, 22);
+                        margin-top: 4.7rem;
+                        @include portrait{
+                            font-size: 2.2rem;
+                        }
+                    }
+
+                    @include sp {
+                        font-size: 3.2rem;
+                        margin-top: 2.1svh;
+                    }
+                }
+
+                .list{
+                    display: flex;
+                    flex-wrap: wrap;
+                    opacity: .65;
+
+                    @include pc {
+                        margin-top: 3rem;
+                    }
+
+                    @include sp {
+                        width: 106%;
+                        margin-top: 1.3svh;
+                    }
+
+                    li{
+                        @include pc {
+                            font-size: px_to_vh($PC_BASE_H, 14);
+                            width: 25%;
+                            margin-bottom: px_to_vh($PC_BASE_H, 32);
+                            @include portrait{
+                                font-size: 1.4rem;
+                            }
+                        }
+
+                        @include sp {
+                            font-size: 2.2rem;
+                            width: 50%;
+                            margin-bottom: 1.3svh;
+                        }
+                    }
+                }
+            }
+
+            .back_to_top_btn {
+                opacity: .65;
+                transition: opacity 400ms;
+                transition-timing-function: $easeOutQuart;
+                @include hoverable{
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+
+                @include pc {
+                    font-size: px_to_vh($PC_BASE_H, 22);
+                    position: absolute;
+                    left: 46.4vw;
+                    bottom: px_to_vh($PC_BASE_H, 37);
+                    @include portrait{
+                        font-size: 2.2rem;
+                    }
+                }
+
+                @include sp {
+                    margin-top: 6svh;
+                    font-size: 2.4rem;
+                    position: relative;
+                    left: 2.9rem;
+                    line-height: 1;
+                }
+
+                a, a:visited {
+                    color: #fff;
+                }
+            }
+
+            .to_corporate_btn{
+                position: absolute;
+                opacity: .65;
+                transition: opacity 400ms;
+                transition-timing-function: $easeOutQuart;
+                @include hoverable{
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+
+                a, a:visited {
+                    color: #fff;
+                }
+
+                @include pc {
+                    font-size: px_to_vh($PC_BASE_H, 22);
+                    right: 17.1vw;
+                    bottom: px_to_vh($PC_BASE_H, 37);
+
+                    @include portrait{
+                        font-size: 2.2rem;
+                    }
+                }
+
+                @include sp {
+                    font-size: 2.4rem;
+                    right: 20.8rem;
+                    margin-top: -2svh;
+                    line-height: 1;
+                }
+            }
+
+            .cp{
+                position: absolute;
+                opacity: .65;
+                color: #fff;
+                @include pc {
+                    font-size: px_to_vh($PC_BASE_H, 22);
+                    right: 4.8vw;
+                    bottom: px_to_vh($PC_BASE_H, 37);
+                    @include portrait{
+                        font-size: 2.2rem;
+                    }
+                }
+
+                @include sp {
+                    right: 2.7rem;
+                    font-size: 2.4rem;
+                    line-height: 1;
+                    margin-top: -2svh;
+                }
+            }
+        }
+    }
+
+    @include pc{
+        position: fixed;
+        //height: 100vh;
+        height: var(--common_stage_height);
+    }
+
+    @include sp{
+
+    }
+
+    .section_wrap{
+        @include pc{
+            display: flex;
+        }
+
+        @include sp{
+
+        }
+    }
+
+    &.show{
+        visibility: visible;
+        pointer-events: inherit;
+        opacity: 1;
+    }
+
+    &.start{
+        .section_kv{
+            h2{
+                .sub_tit{
+                    opacity: 1;
+                }
+
+                .item{
+                    color: #fff;
+                }
+
+                .tit{
+                    .chunk_child{
+                        transform: translate3d(0, 0, 0) !important;
+                    }
+                }
+            }
+
+            .text{
+                .item{
+                    opacity: 1;
+                }
+            }
+
+            .scroll{
+                opacity: 1;
+
+                &:before{
+                    @include pc {
+                        width: 85.5vw;
+                    }
+
+                    @include sp {
+                        transform: scaleY(1);
+                    }
+                }
+            }
+        }
+    }
+
+    &.show_landing_directly{
+        transition: clip-path 1000ms;
+        transition-timing-function: $easeOutQuart;
+        clip-path: inset(0 0 0 0) !important;
+    }
+
+    .section{
+        flex-shrink: 0;
+        position: relative;
+
+        @include pc {
+            //height: 100vh;
+            height: var(--common_stage_height);
+            //overflow-y: hidden;
+            .img_motion{
+                overflow: hidden;
+                img{
+                    width: auto !important;
+                }
+            }
+        }
+
+        @include sp {
+
+        }
+
+        h2{
+            position: absolute;
+            z-index: 1;
+
+            &.show{
+                .sub_tit{
+                    opacity: 1;
+                }
+
+                .item{
+                    color: #fff;
+                }
+
+                .tit{
+                    .chunk_child{
+                        transform: translate3d(0, 0, 0) !important;
+                    }
+                }
+            }
+
+            & > span{
+                display: block;
+            }
+
+            .sub_tit{
+
+                margin-left: 0.8rem;
+                letter-spacing: .02em;
+                transition: opacity 350ms;
+                transition-timing-function: $easeOutQuart;
+                opacity: 0;
+
+                @include pc {
+                    font-size: px_to_vh($PC_BASE_H, 40);
+                    line-height: 1.3;
+                    span{
+                        display: inline-block;
+                        font-size: px_to_vh($PC_BASE_H, 38);
+                    }
+                }
+
+                @include sp {
+                    line-height: 1.6;
+                    font-size: 4.0rem;
+                    span{
+                        font-size: 3.8rem;
+                        display: inline-block;
+                    }
+                }
+            }
+
+            .tit{
+                line-height: .9;
+
+                @include pc {
+                    font-size: px_to_vh($PC_BASE_H, 120);
+                    //letter-spacing: -0.026em;
+                    letter-spacing: -0.046em;//最終詰め
+
+                    .space{
+                        display: inline-block;
+                        width: px_to_vh($PC_BASE_H, 28);
+                    }
+                }
+
+                @include sp {
+                    font-size: 10rem;
+                    //letter-spacing: -0.01em;
+                    letter-spacing: -0.03em;//最終詰め
+                    .space{
+                        width: 2.6rem;
+                        display: inline-block;
+                    }
+                }
+
+                span.space{
+                    @include pc {
+                        &.sp{
+                            display: none !important;
+                        }
+                    }
+
+                    @include sp {
+                        &.pc{
+                            display: none;
+                        }
+                    }
+                }
+
+                .chunk{
+                    clip-path: inset(-1% -3% -1% -1%);
+
+                    .chunk_child{
+                        transform: translate3d(0, 200%, 0);
+                        transition: transform 600ms;
+                        transition-timing-function: $easeOutQuart;
+                        display: inline-block;
+                    }
+
+                    $delay_for_floors: 0;
+                    $delay2_for_floors: .3;
+                    &.chunk1{
+                        .chunk_child{
+                            transition-delay: $delay_for_floors + s;
+                        }
+                        .item{
+                            @for $i from 1 through 15 {
+                                &:nth-of-type(#{$i}) {
+                                    transition-delay: $delay_for_floors + $delay2_for_floors + $i * .025 + s;
+                                }
+                            }
+                        }
+                    }
+
+                    &.chunk2{
+                        .chunk_child {
+                            transition-delay: $delay_for_floors + .1 + s;
+                        }
+                        .item{
+                            @for $i from 1 through 15 {
+                                &:nth-of-type(#{$i}) {
+                                    transition-delay: $delay_for_floors + $delay2_for_floors + .1 + $i * .025 + s;
+                                }
+                            }
+                        }
+                    }
+
+                    &.chunk3{
+                        .chunk_child{
+                            transition-delay: $delay_for_floors + .2 + s;
+                        }
+                        .item{
+                            @for $i from 1 through 15 {
+                                &:nth-of-type(#{$i}) {
+                                    transition-delay: $delay_for_floors + $delay2_for_floors + .2 + $i * .025 + s;
+                                }
+                            }
+                        }
+                    }
+
+                    &.chunk4{
+                        .chunk_child{
+                            transition-delay: $delay_for_floors + .3 + s;
+                        }
+                        .item{
+                            @for $i from 1 through 15 {
+                                &:nth-of-type(#{$i}) {
+                                    transition-delay: $delay_for_floors + $delay2_for_floors + .3 + $i * .025 + s;
+                                }
+                            }
+                        }
+                    }
+                    &.chunk5{
+                        .chunk_child{
+                            transition-delay: $delay_for_floors + .4 + s;
+                        }
+                        .item{
+                            @for $i from 1 through 15 {
+                                &:nth-of-type(#{$i}) {
+                                    transition-delay: $delay_for_floors + $delay2_for_floors + .4 + $i * .025 + s;
+                                }
+                            }
+                        }
+                    }
+                    &.chunk6{
+                        .chunk_child{
+                            transition-delay: $delay_for_floors + .5 + s;
+                        }
+                        .item{
+                            @for $i from 1 through 15 {
+                                &:nth-of-type(#{$i}) {
+                                    transition-delay: $delay_for_floors + $delay2_for_floors + .5 + $i * .025 + s;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .text{
+            position: absolute;
+            opacity: 0;
+            transition: opacity 500ms;
+            transition-timing-function: $easeOutQuad;
+            transition-delay: 500ms;
+            &.show{
+                opacity: 1;
+            }
+
+            @include pc {
+                font-size: px_to_vh($PC_BASE_H, 13);
+            }
+
+            @include sp {
+                font-size: 2.4rem;
+            }
+        }
+
+        .main_img{
+            @include pc{
+                width: 139vh;
+                //height: 100vh;
+                height: var(--common_stage_height);
+            }
+
+            @include sp{
+                width: 100vw;
+            }
+        }
+
+        .bg_img{
+            position: absolute;
+
+            @include pc {
+                top: 0;
+                //height: 100vh;
+                height: var(--common_stage_height);
+
+                img{
+                    //object-position: 65%;
+                }
+            }
+
+            @include sp {
+                width: 100vw;
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .section_kv{
+        @include pc {
+            width: 165rem;
+        }
+
+        @include sp {
+            width: 100vw;
+            height: 100svh;
+
+            .main_img{
+                height: 89.5svh;
+            }
+        }
+
+        .main_img{
+            @include pc {
+                width: 125rem;
+            }
+
+            @include sp {
+
+            }
+        }
+
+        h2{
+            @include pc {
+                left: 6.1rem;
+                bottom: px_to_vh($PC_BASE_H, 182);
+            }
+
+            @include sp {
+                bottom: 30.5rem;
+                left: 2.1rem;
+            }
+
+            .tit{
+                line-height: .8;
+            }
+
+            .sub_tit{
+                opacity: 0;
+            }
+        }
+
+        .text{
+            line-height: 1.4;
+            opacity: 1;
+
+            .item{
+                opacity: 0;
+                transition: opacity 200ms;
+                transition-timing-function: $easeOutQuart;
+            }
+
+            @include pc {
+                font-size: px_to_vh($PC_BASE_H, 16);
+                bottom: px_to_vh($PC_BASE_H, 114);
+                left: 7rem;
+            }
+
+            @include sp {
+                font-size: 2.6rem;
+                bottom: 21rem;
+                left: 3rem;
+            }
+        }
+
+        .scroll{
+            position: absolute;
+            display: flex;
+            align-items: baseline;
+            opacity: 0;
+            transition: opacity 350ms;
+            transition-timing-function: $easeOutQuart;
+            transition-delay: .3s;
+
+            @include pc {
+                font-size: px_to_vh($PC_BASE_H, 14);
+                left: 7rem;
+                bottom: px_to_vh($PC_BASE_H, 42);
+            }
+
+            @include sp {
+                font-size: 2.2rem;
+                left: 3rem;
+                bottom: 1.8rem;
+            }
+
+            &:before{
+                content:'';
+                display: inline-block;
+                background-color: #fff;
+
+                @include pc {
+                    width: 0vw;
+                    height: 1px;
+                    margin-right: 1vw;
+                    transition: width 1000ms;
+                    transition-timing-function: $easeInOutQuart;
+                    transition-delay: 0.4s;
+                }
+
+                @include sp {
+                    width: 1px;
+                    height: 18.6vw;
+                    margin-right: 3.7vw;
+                    transform: scaleY(0);
+                    transform-origin: top;
+                    transition: transform 600ms;
+                    transition-timing-function: $easeOutQuart;
+                    transition-delay: 1.0s;
+                }
+            }
+        }
+    }
+
+    .section1{
+        @include pc {
+            display: flex;
+        }
+
+        @include sp {
+
+        }
+
+        .bg{
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            @include pc {
+                //height: 100vh;
+                height: var(--common_stage_height);
+            }
+
+            @include sp {
+                width: 100vw;
+                height: 186vw;
+            }
+        }
+
+        .img{
+            position: relative;
+
+            @include pc {
+                width: 140vh;
+                //height: 100vh;
+                height: var(--common_stage_height);
+            }
+
+            @include sp {
+                width: 100vw;
+                height: 67vw;
+                margin-top: 12rem;
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        h2{
+            @include pc {
+                bottom: px_to_vh($PC_BASE_H, 47);
+            }
+
+            @include sp {
+                left: 2.6rem;
+                top: -6.9rem;
+                position: relative;
+                .tit{
+                    letter-spacing: -0.03em;
+                }
+            }
+        }
+
+        .floor_info{
+            display: flex;
+
+            @include pc {
+                font-size: px_to_vh($PC_BASE_H, 14);
+                position: absolute;
+                left: 145.7vh;
+                top: px_to_vh($PC_BASE_H, 40);
+
+                .sub_tit {
+                    &:after {
+                        height: 1px;
+                        width: px_to_vh($PC_BASE_H, 15);
+                        margin-left: px_to_vh($PC_BASE_H, 9);
+                        margin-right: px_to_vh($PC_BASE_H, 8);
+                        margin-top: px_to_vh($PC_BASE_H, 3);
+                    }
+                }
+            }
+
+            @include sp {
+                font-size: 2.2rem;
+                position: relative;
+                margin-left: 51.7vw;
+                margin-top: 1.1rem;
+
+                .sub_tit {
+                    &:after {
+                        width: 2.7rem;
+                        height: 1px;
+                        margin-left: 1.3rem;
+                        margin-right: 0.8rem;
+                        margin-top: 0.5rem;
+                    }
+                }
+            }
+
+            .sub_tit{
+                display: flex;
+                align-items: center;
+                &:after{
+                    content:'';
+                    background-color: #fff;
+                    display: inline-block;
+                }
+            }
+        }
+
+        .text{
+            text-align: justify;
+            @include pc {
+                bottom: 32vh;
+                left: 155.5vh;
+                width: 22.3vh;
+                letter-spacing: 0.04em;
+                @include landscape {
+
+                }
+            }
+
+            @include sp {
+                position: relative;
+                width: 34rem;
+                margin-left: 51.7vw;
+                margin-top: 2.5rem;
+                line-height: 1.8;
+            }
+        }
+
+        .img2{
+            position: relative;
+            @include pc {
+            }
+
+            @include sp {
+
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .video{
+            @include pc {
+                position: relative;
+                top: 100vh;
+                width: px_to_vh($PC_BASE_H, 640);
+                height: px_to_vh($PC_BASE_H, 360);
+                margin-top: px_to_vh($PC_BASE_H, -410);
+                margin-left: px_to_vh($PC_BASE_H, 50);
+            }
+
+            @include sp {
+                margin-top: 5.6rem;
+                width: 84vw;
+            }
+
+            img, video{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .section2{
+        @include pc {
+            display: flex;
+        }
+
+        @include sp {
+
+        }
+
+        .bg{
+            position: absolute;
+        }
+
+        .bg_img{
+            position: absolute;
+
+            @include pc {
+                top: 0;
+                //height: 100vh;
+                height: var(--common_stage_height);
+            }
+
+            @include sp {
+                width: 100vw;
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        h2{
+            @include pc {
+
+            }
+
+            @include sp {
+                left: 2.6rem;
+                .tit{
+                    letter-spacing: -0.03em;
+                }
+            }
+        }
+
+        .text{
+            text-align: justify;
+            @include pc {
+                width: px_to_vh($PC_BASE_H, 203);
+                letter-spacing: 0.04em;
+                @include landscape {
+
+                }
+            }
+
+            @include sp {
+                position: relative;
+                width: 35rem;
+                left: 2.9rem;
+                margin-top: 19.8rem;
+                line-height: 1.8;
+            }
+        }
+
+        .main_img{
+            @include pc {
+                position: relative;
+            }
+
+            @include sp {
+
+            }
+        }
+
+        .img2{
+            position: relative;
+
+            @include pc {
+
+                @include landscape {
+
+                }
+            }
+
+            @include sp {
+
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .video{
+            @include pc {
+                position: absolute;
+                width: px_to_vh($PC_BASE_H, 640);
+                height: px_to_vh($PC_BASE_H, 360);
+                margin-top: px_to_vh($PC_BASE_H, 50);
+            }
+
+            @include sp {
+                position: relative;
+                width: 63rem;
+                margin-top: 5rem;
+                left: 12rem;
+            }
+
+            img, video{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .img3{
+            position: relative;
+
+            @include pc {
+                position: absolute;
+            }
+
+            @include sp {
+                position: relative;
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .img4{
+            position: relative;
+
+            @include pc {
+                position: relative;
+            }
+
+            @include sp {
+                margin-top: 5rem;
+                width: 45rem;
+                height: 27.6rem;
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .img5{
+            position: relative;
+
+            @include pc {
+
+            }
+
+            @include sp {
+
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .section3{
+        background-color: #fff;
+
+        @include pc {
+            width: 164.5vh;
+        }
+
+        @include sp {
+            width: 100vw;
+            height: 118.5vh;
+        }
+
+        h2{
+            position: absolute;
+            z-index: 1;
+            @include pc {
+                left: px_to_vh($PC_BASE_H, 649);
+                bottom: px_to_vh($PC_BASE_H, 75);
+            }
+
+            @include sp {
+                left: 16.1rem;
+                //bottom: 38.5rem;
+                top: 50%;
+                margin-top: 19.2rem;
+                .tit{
+                    letter-spacing: -0.03em;
+                }
+            }
+        }
+
+        .text{
+            letter-spacing: .04em;
+            z-index: 1;
+            text-align: justify;
+
+            @include pc {
+                left: px_to_vh($PC_BASE_H, 646);
+                margin-left: 70.5vh;
+                transform: translate3d(-100%, 0, 0);
+                bottom: px_to_vh($PC_BASE_H, 206);
+            }
+
+            @include sp {
+                left: 17.1rem;
+                //bottom: 18.9rem;
+                width: 51rem;
+                line-height: 1.75;
+
+                top: 50%;
+                margin-top: 31rem;
+            }
+        }
+
+        .imgs{
+            position: absolute;
+
+            @include pc {
+
+            }
+
+            @include sp {
+                top: 50%;
+                margin-top: -35rem;
+            }
+
+            &.show{
+                img{
+                    opacity: 1;
+                }
+            }
+
+            img{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0;
+
+                transition: opacity 600ms;
+                transition-timing-function: $easeInOutQuad;
+            }
+        }
+    }
+
+    .next{
+        @include pc {
+            width: 100vw;
+            //display: flex;
+        }
+
+        @include sp {
+
+        }
+
+        &.show{
+            .next_text{
+                opacity: 1;
+            }
+
+            .more_btn{
+                clip-path: inset(0 0 0 0);
+            }
+
+            .back_to_top_btn{
+                opacity: 1;
+            }
+        }
+
+        .next_text{
+            position: absolute;
+            opacity: 0;
+            transition: opacity 400ms;
+            transition-timing-function: $easeOutQuart;
+
+            @include pc {
+                font-size: px_to_vh($PC_BASE_H, 16);
+                top: px_to_vh($PC_BASE_H, 270);
+                left: 7rem;
+
+                @include portrait{
+                    font-size: 1.6rem;
+                }
+            }
+
+            @include sp {
+                font-size: 2.2rem;
+                transform: rotate(90deg);
+                transform-origin: left top;
+                top: 11.6rem;
+                left: 6rem;
+            }
+        }
+
+        h2{
+            @include pc {
+                position: relative;
+                //margin-top: px_to_vh($PC_BASE_H, 150);
+                margin-top: px_to_vh($PC_BASE_H, 208);
+                top: 0 !important;
+                left: 24rem;
+                white-space: nowrap;
+                display: inline-block;
+
+                .sub_tit{
+                    @include portrait{
+                        font-size: 4rem;
+                        span{
+                            font-size: 3.8rem;
+                        }
+                    }
+                }
+
+                .tit{
+                    @include portrait{
+                        font-size: 12rem;
+
+                        .space{
+                            width: 2.8rem;
+                        }
+                    }
+                }
+            }
+
+            @include sp {
+                position: relative;
+                padding-top: 9.8rem;
+                margin-left: 11rem;
+
+                .sub_tit{
+                    font-size: 3.6rem;
+                    //@include landscape {
+                    //    font-size: px_to_vh($PC_BASE_H, 36);
+                    //}
+                    span{
+                        font-size: 3.5rem;
+                        display: inline-block;
+                        //@include landscape {
+                        //    font-size: px_to_vh($PC_BASE_H, 35);
+                        //}
+                    }
+                }
+            }
+        }
+
+        .more_btn{
+            white-space: nowrap;
+            clip-path: inset(0 100% 0 0);
+            transition: clip-path 600ms;
+            transition-timing-function: $easeOutQuart;
+            transition-delay: .6s;
+
+            @include pc {
+                position: absolute;
+                font-size: px_to_vh($PC_BASE_H, 14);
+                left: 25rem;
+                margin-top: px_to_vh($PC_BASE_H, 56);
+                z-index: 1;
+            }
+
+            @include sp {
+                position: relative;
+                font-size: 2.4rem;
+                left: 12rem;
+                margin-top: 5.9rem;
+                display: inline-block;
+            }
+
+            a, a:visited{
+                background-color: #fff;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include pc {
+                    width: px_to_vh($PC_BASE_H, 160);
+                    height: px_to_vh($PC_BASE_H, 70);
+                }
+
+                @include sp {
+                    width: 22rem;
+                    height: 9rem;
+                }
+
+                &:after{
+                    content: '';
+                    mask-image: url($IMG_PATH + '/assets/img/common/arrow.svg');
+                    display: inline-block;
+                    mask-size: cover;
+
+                    @include pc {
+                        width: px_to_vh($PC_BASE_H, 10);
+                        height: px_to_vh($PC_BASE_H, 10);
+                        margin-left: px_to_vh($PC_BASE_H, 12);
+                    }
+
+                    @include sp {
+                        width: 1.6rem;
+                        height: 1.6rem;
+                        margin-left: 1.3rem;
+                    }
+                }
+
+                @include hoverable{
+                    &:hover{
+                        color: #fff;
+                        &:after{
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+        .back_to_top_btn{
+            opacity: 0;
+            transition: opacity 400ms;
+            transition-timing-function: $easeOutQuart;
+            transition-delay: .9s;
+
+            @include pc {
+                position: absolute;
+                font-size: px_to_vh($PC_BASE_H, 22);
+                bottom: px_to_vh($PC_BASE_H, 37);
+                left: 25rem;
+                z-index: 1;
+                @include portrait{
+                    font-size: 2.2rem;
+                }
+            }
+
+            @include sp {
+                position: relative;
+                font-size: 2.4rem;
+                margin-top: 12rem;
+                left: 11.9rem;
+            }
+
+            a, a:visited{
+                color: #fff;
+                transition: opacity 400ms;
+                transition-timing-function: $easeOutQuart;
+                @include hoverable{
+                    &:hover{
+                        opacity: .6;
+                    }
+                }
+            }
+        }
+
+        .img{
+            @include pc {
+                position: absolute;
+                top: 0;
+                margin-left: 72rem;
+                width: 72rem;
+                //height: 100vh;
+                height: var(--common_stage_height);
+            }
+
+            @include sp {
+                width: 100vw;
+                height: 91vw;
+                margin-top: 3.5rem;
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+
+//For PC LAYOUT
+@media screen and (min-width: $BP + px) {
+
+}
+
+//For TABLET/SP LAYOUT
+@media screen and (max-width: ($BP - 1) + px) {
+
+}

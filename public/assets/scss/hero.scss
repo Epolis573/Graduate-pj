@@ -1,0 +1,899 @@
+@import "mixin";
+@import "variable";
+@import "media";
+
+
+/*
+z-index
+
+*/
+
+#hero{
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    width: 100vw;
+    //height: 100vh;
+    height: var(--common_stage_height);
+    z-index: 2;
+
+    &.show{
+        visibility: visible;
+        pointer-events: inherit;
+        opacity: 1;
+
+        .bg{
+            @include pc{
+                width: 44rem;
+            }
+
+            @include sp{
+                width: 27rem;
+            }
+
+            .floor_list{
+                .tit{
+                    opacity: 1;
+                }
+            }
+        }
+
+        h2{
+            .item{
+                opacity: 1;
+            }
+        }
+
+        .canvas_container{
+            clip-path: inset(0 0 0 0);
+        }
+
+        .floor_list_dot{
+            .tit{
+                opacity: 1;
+            }
+        }
+
+        .color_bar, .logo, .scroll, .cp{
+            opacity: 1;
+        }
+    }
+
+    &.hide{
+        transition: transform 600ms;
+        transition-timing-function: $easeInOutQuart;
+        transform: translate3d(-200%, 0, 0);
+
+        .canvas_container{
+            display: none;
+        }
+    }
+
+    &.hide_for_about{
+        transition: transform 600ms;
+        transition-timing-function: $easeInOutQuart;
+        transform: translate3d(-200%, 0, 0);
+    }
+
+    .color_bar{
+        width: 1.5rem;
+        //height: 100vh;
+        height: var(--common_stage_height);
+
+        position: absolute;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 350ms;
+        transition-timing-function: $easeOutQuart;
+
+        &.select_about{
+            .bar_child{
+                &.color_about{
+                    @include pc {
+                        height: 66.5%;
+                    }
+
+                    @include sp {
+                        height: 52.0%;
+                    }
+                }
+            }
+        }
+
+        .bar_child{
+            width: 100%;
+            transition: height 600ms;
+            transition-timing-function: $easeOutQuart;
+
+            @include pc{
+                height: 6.7%;
+            }
+
+            @include sp{
+                height: 9.6%;
+            }
+
+            &.color_about{
+                height: 0;
+            }
+        }
+
+        .bar_child.current{
+            @include pc{
+                //height: 66.5%;
+                height: 73.2%;
+            }
+
+            @include sp{
+                //height: 52.0%;
+                height: 61.6%;
+            }
+        }
+
+        .color_about{
+            background-color: $ABOUT_COLOR;
+        }
+
+        .color11{
+            background-color: $FLOOR11_COLOR;
+        }
+
+        .color10{
+            background-color: $FLOOR10_COLOR;
+        }
+
+        .color09{
+            background-color: $FLOOR9_COLOR;
+        }
+
+        .color08{
+            background-color: $FLOOR8_COLOR;
+        }
+
+        .color07{
+            background-color: $FLOOR7_COLOR;
+        }
+    }
+
+    .bg{
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+        transition: width 700ms;
+        transition-timing-function: $easeOutQuart;
+        width: 0rem;
+
+        @include pc {
+            //height: 100vh;
+            height: var(--common_stage_height);
+        }
+
+        @include sp {
+            height: 100svh;
+        }
+
+        img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            //object-position: 22%;
+            filter: grayscale(1);
+
+            opacity: 0;
+            transition: opacity 600ms, transform 900ms;
+            transition-timing-function: $easeInOutQuad;
+            transform: scale(1.2) translate3d(0, 10%, 0);
+            &.current{
+                opacity: 1;
+                transform: scale(1.2) translate3d(0, 0, 0);
+            }
+        }
+
+        .screen{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--top_bg_color);
+
+            mix-blend-mode: screen;
+            transition: background-color 600ms;
+            transition-timing-function: $easeOutQuart;
+        }
+
+        .multiply{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--top_bg_color);
+            mix-blend-mode: multiply;
+            opacity: .35;
+            transition: background-color 600ms;
+            transition-timing-function: $easeOutQuart;
+        }
+
+        .floor_list{
+            color: var(--top_color);
+            opacity: .4;
+
+            .tit{
+                opacity: 0;
+                transition: opacity 600ms;
+                transition-timing-function: $easeOutQuart;
+                transition-delay: 0.8s;
+            }
+        }
+    }
+
+    h2{
+        color: var(--top_sub_color);
+        position: absolute;
+        z-index: 2;
+        line-height: 1.1;
+        transition: color 600ms;
+        transition-timing-function: $easeOutQuart;
+
+        @include pc{
+            left: 7rem;
+            top: 4.7rem;
+        }
+
+        @include sp{
+            right: 3.4vw;
+            top: 37.4rem;
+            transform: rotate(90deg);
+            transform-origin: right top;
+        }
+
+        & > span{
+            display: block;
+        }
+
+        .item{
+            opacity: 0;
+            transition: opacity 200ms;
+            transition-timing-function: $easeOutQuart;
+        }
+
+        .tit{
+            @include pc{
+                font-size: 1.6rem;
+            }
+
+            @include sp{
+                font-size: 2.4rem;
+            }
+        }
+
+        .sub_tit{
+            @include pc{
+                font-size: 1.2rem;
+            }
+
+            @include sp{
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    .logo{
+        position: absolute;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 350ms;
+        transition-timing-function: $easeOutQuart;
+        transition-delay: .5s;
+
+        @include pc {
+            left: 35.5vw;
+            //top: 5rem;
+            top: px_to_vh($PC_BASE_H, 50);
+            a {
+                //width: 11rem;
+                //height: 1.6rem;
+                width: px_to_vh($PC_BASE_H, 110);
+                height: px_to_vh($PC_BASE_H, 16);
+
+            }
+        }
+
+        @include sp {
+            left: 39.8vw;
+            top: 3rem;
+            a{
+                width: 15.1rem;
+                height: 2.2rem;
+            }
+        }
+
+        a{
+            display: block;
+            background-color: var(--top_sub_color);
+            mask-image: url($IMG_PATH + '/assets/img/common/logo.svg');
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            transition: background-color 600ms;
+            transition-timing-function: $easeOutQuart;
+
+        }
+    }
+
+    .canvas_container{
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+
+        clip-path: inset(0 100% 0 0);
+        transition: clip-path 1000ms;
+        transition-timing-function: $easeOutQuart;
+        transition-delay: .365s;
+
+        @include pc{
+            top: 50vh;
+            transform: translate3d(0, -50%, 0);
+            width: 80vw;
+            height: 60vh;
+        }
+
+        @include sp{
+            top: 36.2svh;
+            width: 84vw;
+            height: 56svh;
+        }
+
+        @include hoverable{
+            &.color1{
+                &:hover{
+                    .more_detail{
+                        background-color: $FLOOR7_COLOR;
+                    }
+                }
+            }
+
+            &.color2{
+                &:hover{
+                    .more_detail{
+                        background-color: $FLOOR8_COLOR;
+                    }
+                }
+            }
+
+            &.color3{
+                &:hover{
+                    .more_detail{
+                        background-color: $FLOOR9_COLOR;
+                    }
+                }
+            }
+
+            &.color4{
+                &:hover{
+                    .more_detail{
+                        background-color: $FLOOR10_COLOR;
+                    }
+                }
+            }
+
+            &.color5{
+                &:hover{
+                    .more_detail{
+                        background-color: $FLOOR11_COLOR;
+                    }
+                }
+            }
+
+            &.color6{
+                &:hover{
+                    .more_detail{
+                        background-color: $ABOUT_COLOR;
+                    }
+                }
+            }
+        }
+
+        .more_detail{
+            background-color: var(--top_sub_color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 350ms;
+            transition-timing-function: $easeOutQuart;
+
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: #fff;
+            white-space: nowrap;
+
+            @include pc{
+                font-size: 1.4rem;
+                width: 16rem;
+                height: 7rem;
+            }
+
+            @include sp{
+                font-size: 2.4rem;
+                width: 22rem;
+                height: 9rem;
+            }
+
+            &:after{
+                content: '';
+                background-image: url($IMG_PATH + '/assets/img/common/arrow.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                display: inline-block;
+
+                @include pc{
+                    width: 1rem;
+                    height: 1rem;
+                    margin-left: 1.2rem;
+                }
+
+                @include sp{
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    margin-left: 1.3rem;
+                }
+            }
+        }
+    }
+
+    .floor_list{
+        position: absolute;
+        color: var(--top_color);
+        pointer-events: none;
+
+        @include pc{
+            top: 50vh;
+            transform: translate3d(0, -100%, 0);
+            margin-top: 34.4vh;
+            left: 6.1rem;
+            transition: transform 600ms, color 600ms, opacity 600ms;
+            transition-timing-function: $easeOutQuart;
+            &.floor7{
+                transform: translate3d(0, -100%, 0);
+            }
+
+            &.floor8{
+                transform: translate3d(0, -84.1%, 0);
+            }
+
+            &.floor9{
+                transform: translate3d(0, -68.2%, 0);
+            }
+
+            &.floor10{
+                transform: translate3d(0, -52.2%, 0);
+            }
+
+            &.floor11{
+                transform: translate3d(0, -36.4%, 0);
+            }
+
+            &.floor12{
+                transform: translate3d(0, -10.3%, 0);
+            }
+        }
+
+        @include sp{
+            transform: rotate(90deg);
+            transform-origin: left top;
+            top: 9rem;
+            left: 132.7rem;
+            transition: left 600ms, color 600ms, opacity 600ms;
+            transition-timing-function: $easeOutQuart;
+            &.floor7{
+                left: 132.7rem;
+            }
+            &.floor8{
+                left: 114.5rem;
+            }
+
+            &.floor9{
+                left: 84.3rem;
+            }
+
+            &.floor10{
+                left: 66.1rem;
+            }
+
+            &.floor11{
+                left: 47.9rem;
+            }
+
+            &.floor12{
+                left: 17.7rem;
+            }
+        }
+
+        li{
+            white-space: nowrap;
+
+            @include pc{
+                margin-bottom: 0.1rem;
+            }
+
+            @include sp{
+                margin-bottom: -1.5rem;
+            }
+
+            & > span, a > span{
+                display: block;
+            }
+
+            .sub_tit{
+                line-height: 1.3;
+                opacity: 0;
+                margin-left: 0.8rem;
+                letter-spacing: .02em;
+
+                @include pc{
+                    font-size: 4rem;
+                }
+
+                @include sp{
+                    font-size: 6rem;
+                }
+            }
+
+            .tit{
+                //letter-spacing: -.015em;
+                letter-spacing: -0.035em;//最終詰め
+
+                .chunk{
+                    .chunk_child{
+                        .item{
+                            display: inline-block;
+                            transition: color 100ms;
+                            transition-timing-function: $easeOutQuart;
+                            &:nth-last-child {
+                                background-color: #ff0000;
+                            }
+                        }
+                    }
+                }
+
+                @include pc{
+                    line-height: .8;
+                    font-size: 12rem;
+                    .space{
+                        width: 3.3rem;
+                        display: inline-block;
+                    }
+                }
+
+                @include sp{
+                    line-height: .85;
+                    font-size: 14rem;
+                    .space{
+                        width: 3.8rem;
+                        display: inline-block;
+                        &.pc{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .floor_list_dot{
+        color: transparent !important;
+
+        background-clip: text;
+        -webkit-background-clip: text;
+        //@include pc {
+            background-image: url($IMG_PATH + '/assets/img/top/patern7.png');
+        //}
+
+        //@include sp {
+        //    background-image: url($IMG_PATH + '/assets/img/top/sp/patern7.png');
+        //}
+
+        .tit{
+            opacity: 0;
+            transition: opacity 600ms;
+            transition-timing-function: $easeOutQuart;
+            transition-delay: 0.8s;
+        }
+        opacity: .4;
+
+        &.floor7{
+
+            //@include pc {
+                background-image: url($IMG_PATH + '/assets/img/top/patern7.png');
+            //}
+
+            //@include sp {
+            //    background-image: url($IMG_PATH + '/assets/img/top/sp/patern7.png');
+            //}
+        }
+
+        &.floor8{
+            //@include pc {
+                background-image: url($IMG_PATH + '/assets/img/top/patern8.png');
+            //}
+
+            //@include sp {
+            //    background-image: url($IMG_PATH + '/assets/img/top/sp/patern8.png');
+            //}
+        }
+
+        &.floor9{
+            //@include pc {
+                background-image: url($IMG_PATH + '/assets/img/top/patern9.png');
+            //}
+
+            //@include sp {
+            //    background-image: url($IMG_PATH + '/assets/img/top/sp/patern9.png');
+            //}
+        }
+
+        &.floor10{
+            //@include pc {
+                background-image: url($IMG_PATH + '/assets/img/top/patern10.png');
+            //}
+
+            //@include sp {
+            //    background-image: url($IMG_PATH + '/assets/img/top/sp/patern10.png');
+            //}
+        }
+
+        &.floor11{
+            //@include pc {
+                background-image: url($IMG_PATH + '/assets/img/top/patern11.png');
+            //}
+
+            //@include sp {
+            //    background-image: url($IMG_PATH + '/assets/img/top/sp/patern11.png');
+            //}
+        }
+
+        &.floor12{
+            //@include pc {
+                background-image: url($IMG_PATH + '/assets/img/top/patern_about.png');
+            //}
+
+            //@include sp {
+            //    background-image: url($IMG_PATH + '/assets/img/top/sp/patern_about.png');
+            //}
+        }
+    }
+
+    .floor_list_current{
+        li{
+            opacity: 0;
+            pointer-events: none;
+
+            &:nth-of-type(1){
+                .sub_tit{
+                    color: $ABOUT_SUB_COLOR;
+                }
+
+                .item{
+                    color: $ABOUT_COLOR;
+                }
+            }
+
+            &:nth-of-type(2){
+                .sub_tit{
+                    color: $FLOOR11_COLOR;
+                }
+
+                .item{
+                    color: $FLOOR11_SUB_COLOR;
+                }
+            }
+
+            &:nth-of-type(3){
+                .sub_tit{
+                    color: $FLOOR10_SUB_COLOR;
+                }
+                .item{
+                    color: $FLOOR10_COLOR;
+                }
+            }
+
+            &:nth-of-type(4){
+                .sub_tit{
+                    color: $FLOOR9_SUB_COLOR;
+                }
+                .item{
+                    color: $FLOOR9_COLOR;
+                }
+            }
+
+            &:nth-of-type(5){
+                .sub_tit{
+                    color: $FLOOR8_SUB_COLOR;
+                }
+                .item{
+                    color: $FLOOR8_COLOR;
+                }
+            }
+
+            &:nth-of-type(6){
+                .sub_tit{
+                    color: $FLOOR7_SUB_COLOR;
+                }
+                .item{
+                    color: $FLOOR7_COLOR;
+                }
+            }
+
+            .sub_tit{
+                transition: opacity 350ms;
+                transition-timing-function: $easeOutQuart;
+            }
+
+            .tit{
+                .chunk{
+                    clip-path: inset(0 -1% 0 0);
+                    .chunk_child{
+                        transform: translate3d(0, 200%, 0);
+                        transition: transform 600ms;
+                        transition-timing-function: $easeOutQuart;
+                        display: inline-block;
+                    }
+
+                    $delay_for_hero: .1;
+                    $delay2_for_hero: .3;
+                    &.chunk1{
+                        .chunk_child{
+                            transition-delay: $delay_for_hero + s;
+                        }
+                        .item{
+                            @for $i from 1 through 10 {
+                                &:nth-of-type(#{$i}) {
+                                    transition-delay: $delay_for_hero + $delay2_for_hero + $i * .025 + s;
+                                }
+                            }
+                        }
+                    }
+
+                    &.chunk2{
+                        .chunk_child {
+                            transition-delay: $delay_for_hero + .1 + s;
+                        }
+                        .item{
+                            @for $i from 1 through 10 {
+                                &:nth-of-type(#{$i}) {
+                                    transition-delay: $delay_for_hero + $delay2_for_hero + .1 + $i * .025 + s;
+                                }
+                            }
+                        }
+                    }
+
+                    &.chunk3{
+                        .chunk_child{
+                            transition-delay: $delay_for_hero + .2 + s;
+                        }
+                        .item{
+                            @for $i from 1 through 10 {
+                                &:nth-of-type(#{$i}) {
+                                    transition-delay: $delay_for_hero + $delay2_for_hero + .2 + $i * .025 + s;
+                                }
+                            }
+                        }
+                    }
+
+                    &.chunk4{
+                        .chunk_child{
+                            transition-delay: $delay_for_hero + .3 + s;
+                        }
+                        .item{
+                            @for $i from 1 through 10 {
+                                &:nth-of-type(#{$i}) {
+                                    transition-delay: $delay_for_hero + $delay2_for_hero + .3 + $i * .025 + s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        li.current{
+            opacity: 1;
+            pointer-events: initial;
+            cursor: pointer;
+            .sub_tit{
+                opacity: 1;
+            }
+
+            &:nth-of-type(1){
+                .item{
+                    color: $ABOUT_SUB_COLOR;
+                }
+            }
+
+            &:nth-of-type(2){
+                .item{
+                    color: $FLOOR11_COLOR;
+                }
+            }
+
+            &:nth-of-type(3){
+                .item{
+                    color: $FLOOR10_SUB_COLOR;
+                }
+            }
+
+            &:nth-of-type(4){
+                .item{
+                    color: $FLOOR9_SUB_COLOR;
+                }
+            }
+
+            &:nth-of-type(5){
+                .item{
+                    color: $FLOOR8_SUB_COLOR;
+                }
+            }
+
+            &:nth-of-type(6){
+                .item{
+                    color: $FLOOR7_SUB_COLOR;
+                }
+            }
+
+            .tit{
+                .chunk{
+                    .chunk_child{
+                        transform: translate3d(0, 0, 0);
+                    }
+                }
+            }
+        }
+    }
+
+    .scroll{
+        position: absolute;
+        color: var(--top_sub_color);
+        opacity: 0;
+        transition: opacity 350ms, color 600ms;
+        transition-timing-function: $easeOutQuart;
+        transition-delay: .5s;
+
+        @include pc{
+            font-size: px_to_vh($PC_BASE_H, 22);
+            bottom: px_to_vh($PC_BASE_H, 37);
+            left: 50.8rem;
+        }
+
+        @include sp{
+            font-size: 2.4rem;
+            bottom: 1.6rem;
+            left: 40vw;
+        }
+    }
+
+    .cp{
+        position: absolute;
+        color: var(--top_sub_color);
+        opacity: 0;
+        transition: opacity 350ms, color 600ms;
+        transition-timing-function: $easeOutQuart;
+        transition-delay: .5s;
+
+        @include pc{
+            font-size: px_to_vh($PC_BASE_H, 22);
+            bottom: px_to_vh($PC_BASE_H, 37);
+            right: 7rem;
+        }
+
+        @include sp{
+            font-size: 2.4rem;
+            bottom: 1.6rem;
+            right: 2.9rem;
+        }
+    }
+}
