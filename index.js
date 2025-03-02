@@ -37,7 +37,7 @@ app.get('/turquoise', (req, res) => {
 app.get('/3Dmap', (req, res) => {
     res.render('3Dmap');
 });
-app.get('/navy/3dBuilding_H', (req, res) => {
+/*app.get('/navy/3dBuilding_H', (req, res) => {
     res.render('3d_views/3dBuilding_H');
 });
 app.get('/green/3dBuilding_AG', (req, res) => {
@@ -51,7 +51,7 @@ app.get('/turquoise/3dBuilding_I', (req, res) => {
 });
 app.get('/orange/3dBuilding_IA', (req, res) => {
     res.render('3d_views/3dBuilding_IA');
-});
+});*/
 
 // Listen
 app.listen(port, () => console.info(`Listening on port ${port}`));
